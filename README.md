@@ -32,8 +32,8 @@ You can use our network with simple GUI. The only erased regions are filled.
 
 The buttons in GUI:
 
-- `Open Image': Open the image you want to edit and reset sketch and color.
-- `Mask': Click this button and draw the mask on the left viewer.
+- `Open Image`: Open the image you want to edit and reset sketch and color.
+- `Mask`: Click this button and draw the mask on the left viewer.
 - `Sketches`: Click this button and draw the line for sketch on the left viewer.
 - `Color`: Click this button and draw the line for color. If you click this first time, you have to choose the color from palette.
 - `Palette`: Click this button to change color. If you choose the color, then click the `Color` button to change.
