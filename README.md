@@ -22,7 +22,7 @@ Basic usage is:
   python3 demo.py
   ```
   
-Select the number of GPU by editing demo.yaml file (not support multi-GPUs).
+Select the number of GPU by editing `demo.yaml` file (not support multi-GPUs).
   ```
   GPU_NUM: 1 (the number you want to use)
   #GPU_NUM: (if you want to use only CPU, erase the number)
@@ -47,3 +47,11 @@ You can use our network with simple GUI.
 CC 4.0 Attribution-NonCommercial International
 
 The software is for educaitonal and academic research purpose only.
+
+## Notes
+
+- this is developed on Linux machine running Ubuntu 18.04.1
+- Provided model and sample code is under a non-commercial creative commons license.
+
+## To do
+- Update training code
