@@ -38,8 +38,8 @@ The buttons in GUI:
 - `Color`: Click this button and draw the line for color. If you click this first time, you have to choose the color from palette.
 - `Palette`: Click this button to change color. If you choose the color, then click the `Color` button to change.
 - `Save Img`: Click this button to save results. Left image is saved '*_edit.jpg' and the Right is saved '*.jpg'.
-- `Arrange': Arrange the editing works.
-- `Complete': Complete the image and show it on the right.
+- `Arrange`: Arrange the editing works.
+- `Complete`: Complete the image and show it on the right.
 
   
 We recommend using this in the following steps:
