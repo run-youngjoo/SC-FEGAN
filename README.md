@@ -1,5 +1,6 @@
 # SC-FEGAN
 SC-FEGAN : Face Editing Generative Adversarial Network with User's Sketch and Color
+
 Youngjoo Jo, Jongyoul Park
 
 ![Teaser GUI](imgs/GUI.gif)
