@@ -3,10 +3,11 @@ SC-FEGAN : Face Editing Generative Adversarial Network with User's Sketch and Co
 Youngjoo Jo, Jongyoul Park
 
 ![Teaser GUI](imgs/GUI.gif)
-![Teaser Image](imgs/teaser.jpg)
 
 ## Overview
 We learn to edit face image with a deep network. Our network SC-FEGAN is well suited to generate high quality synthetic image using intuitive user inputs with sketch and color. We used SN-patchGAN discriminator and Unet-like generator with gated convolutional layers.
+
+![Teaser Image](imgs/teaser.jpg)
 
 ## Dependencies
 - tensorflow
