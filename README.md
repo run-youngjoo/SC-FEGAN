@@ -21,7 +21,7 @@ First, download the model from [Google drive](https://drive.google.com/open?id=1
 
 Basic usage is:
   ```
-  mv /${HOME}/FC-FEGAN.ckpt.* /${HOME}/ckpt/
+  mv /${HOME}/SC-FEGAN.ckpt.* /${HOME}/ckpt/
   python3 demo.py
   ```
   
