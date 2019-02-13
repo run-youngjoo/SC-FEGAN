@@ -40,7 +40,7 @@ The buttons in GUI:
 - `Sketches`: Click this button and draw the line for sketch on the left viewer.
 - `Color`: Click this button and draw the line for color. If you click this first time, you have to choose the color from palette.
 - `Palette`: Click this button to change color. If you choose the color, then click the `Color` button to change.
-- `Save Img`: Click this button to save results. Left image is saved '*_edit.jpg*' and the Right is saved '*.jpg*'.
+- `Save Img`: Click this button to save results. It is saved as '*name.jpg*'.
 - `Arrange`: Arrange the editing works.
 - `Complete`: Complete the image and show it on the right.
 
