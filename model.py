@@ -112,9 +112,21 @@ class Model(object):
                 # self.sess.run(tf.assign(var, var_value))
                 assign_ops.append(tf.assign(var, var_value))
             self.sess.run(assign_ops)
+            self.warmup(config)
             print('Model loaded from {}....end'.format(ckpt_path))
         else:
             print('Model loading is fail')
+            
+    def warmup(self,config):
+        size = config.INPUT_SIZE
+        bc = config.BATCH_SIZE
+        _ = self.sess.run(self.demo_output,
+            feed_dict={
+                self.images: np.zeros([bc,size,size,3]),
+                self.sketches: np.zeros([bc,size,size,1]),
+                self.color: np.zeros([bc,size,size,3]),
+                self.masks: np.zeros([bc,size,size,1]),
+                self.noises: np.zeros([bc,size,size,1])})
 
     def demo(self, config, batch):
         demo_output = self.sess.run(self.demo_output,
