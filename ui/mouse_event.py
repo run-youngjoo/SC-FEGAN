@@ -18,6 +18,9 @@ class GraphicsScene(QGraphicsScene):
         self.mask_points = []
         self.sketch_points = []
         self.stroke_points = []
+        
+        # save the history of edit
+        self.history = []
 
         # strokes color
         self.stk_color = None
@@ -27,6 +30,9 @@ class GraphicsScene(QGraphicsScene):
         self.mask_points = []
         self.sketch_points = []
         self.stroke_points = []
+        
+        # save the history of edit
+        self.history = []
 
         # strokes color
         self.stk_color = None
@@ -49,6 +55,7 @@ class GraphicsScene(QGraphicsScene):
                     pts['prev'] = (int(self.prev_pt.x()),int(self.prev_pt.y()))
                     pts['curr'] = (int(event.scenePos().x()),int(event.scenePos().y()))
                     self.mask_points.append(pts)
+                    self.history.append(0)
                     self.prev_pt = event.scenePos()
                 else:
                     self.prev_pt = event.scenePos()
@@ -59,6 +66,7 @@ class GraphicsScene(QGraphicsScene):
                     pts['prev'] = (int(self.prev_pt.x()),int(self.prev_pt.y()))
                     pts['curr'] = (int(event.scenePos().x()),int(event.scenePos().y()))
                     self.sketch_points.append(pts)
+                    self.history.append(1)
                     self.prev_pt = event.scenePos()
                 else:
                     self.prev_pt = event.scenePos()
@@ -70,6 +78,7 @@ class GraphicsScene(QGraphicsScene):
                     pts['curr'] = (int(event.scenePos().x()),int(event.scenePos().y()))
                     pts['color'] = self.stk_color
                     self.stroke_points.append(pts)
+                    self.history.append(2)
                     self.prev_pt = event.scenePos()
                 else:
                     self.prev_pt = event.scenePos()
@@ -94,3 +103,32 @@ class GraphicsScene(QGraphicsScene):
 
     def erase_prev_pt(self):
         self.prev_pt = None
+    
+    def undo(self):
+        if len(self.items())>1:
+            if len(self.items())>=4:
+                for i in range(3):
+                    item = self.items()[0]
+                    self.removeItem(item)
+                    if self.history[-1] == 0:
+                        self.mask_points.pop()
+                        self.history.pop()
+                    elif self.history[-1] == 1:
+                        self.sketch_points.pop()
+                        self.history.pop()
+                    elif self.history[-1] == 2:
+                        self.stroke_points.pop()
+                        self.history.pop()
+            else:
+                for i in range(len(self.items())-1):
+                    item = self.items()[0]
+                    self.removeItem(item)
+                    if self.history[-1] == 0:
+                        self.mask_points.pop()
+                        self.history.pop()
+                    elif self.history[-1] == 1:
+                        self.sketch_points.pop()
+                        self.history.pop()
+                    elif self.history[-1] == 2:
+                        self.stroke_points.pop()
+                        self.history.pop()
