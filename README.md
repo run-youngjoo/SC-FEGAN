@@ -74,9 +74,9 @@ The software is for educaitonal and academic research purpose only.
 
 ## Notes
 
-- this is developed on Linux machine running Ubuntu 18.04.1
+- This is developed on Linux machine running Ubuntu 18.04.1
 - Provided model and sample code is under a non-commercial creative commons license.
 
 ## Next
 - Update training code
-- Paper will be uploaded
+- The paper will be uploaded
