@@ -207,6 +207,9 @@ class Ex(QWidget, Ui_Form):
             fileName, _ = QFileDialog.getSaveFileName(self, "Save File",
                     QDir.currentPath())
             cv2.imwrite(fileName+'.jpg',self.output_img)
+            
+    def undo(self):
+        self.scene.undo()
 
 if __name__ == '__main__':
     config = Config('demo.yaml')
