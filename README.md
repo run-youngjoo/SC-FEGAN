@@ -1,5 +1,6 @@
 # SC-FEGAN
 SC-FEGAN : Face Editing Generative Adversarial Network with User's Sketch and Color
+[arXiv](https://arxiv.org/abs/1902.06838)
 
 Youngjoo Jo, Jongyoul Park
 
@@ -65,7 +66,7 @@ We recommend using this in the following steps:
 ### Face restoration
 ![restore1](imgs/restoration.jpg)
 
-### Face restoration (with totally erased image)
+### Face restoration (with only sketch and color)
 ![restore2](imgs/restoration2.jpg)
 
 ## License
