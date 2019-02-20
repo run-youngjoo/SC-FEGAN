@@ -201,6 +201,7 @@ class Ex(QWidget, Ui_Form):
                 cv2.line(image,pt['prev'],pt['curr'],(0,0,0),1)        
         cv2.imwrite('tmp.jpg',image)
         image = QPixmap('tmp.jpg')
+        self.scene.history.append(3)
         self.scene.addPixmap(image)
 
     def save_img(self):
