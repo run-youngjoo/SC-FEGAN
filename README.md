@@ -82,4 +82,3 @@ The software is for educaitonal and academic research purpose only.
 
 ## Next
 - Update training code
-- The paper will be uploaded
