@@ -69,7 +69,12 @@ class Ex(QWidget, Ui_Form):
             mat_img = mat_img/127.5 - 1
             self.mat_img = np.expand_dims(mat_img,axis=0)
             self.scene.reset()
+            if len(self.scene.items())>0:
+                self.scene.reset_items()
             self.scene.addPixmap(self.image)
+            if len(self.result_scene.items())>0:
+                self.result_scene.removeItem(self.result_scene.items()[-1])
+            self.result_scene.addPixmap(self.image)
 
     def mask_mode(self):
         self.mode_select(0)
@@ -128,6 +133,7 @@ class Ex(QWidget, Ui_Form):
         self.output_img = result
         result = np.concatenate([result[:,:,2:3],result[:,:,1:2],result[:,:,:1]],axis=2)
         qim = QImage(result.data, result.shape[1], result.shape[0], result.strides[0], QImage.Format_RGB888)
+        self.result_scene.removeItem(self.result_scene.items()[-1])
         self.result_scene.addPixmap(QPixmap.fromImage(qim))
 
     def make_noise(self):
@@ -209,9 +215,15 @@ class Ex(QWidget, Ui_Form):
             fileName, _ = QFileDialog.getSaveFileName(self, "Save File",
                     QDir.currentPath())
             cv2.imwrite(fileName+'.jpg',self.output_img)
-            
+
     def undo(self):
         self.scene.undo()
+
+    def clear(self):
+        self.scene.reset_items()
+        self.scene.reset()
+        if type(self.image):
+            self.scene.addPixmap(self.image)
 
 if __name__ == '__main__':
     config = Config('demo.yaml')
