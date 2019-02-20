@@ -119,7 +119,11 @@ class GraphicsScene(QGraphicsScene):
                     elif self.history[-1] == 2:
                         self.stroke_points.pop()
                         self.history.pop()
+                    elif self.history[-1] == 3:
+                        self.history.pop()
             else:
+                print(len(self.items()))
+                print(self.items())
                 for i in range(len(self.items())-1):
                     item = self.items()[0]
                     self.removeItem(item)
@@ -131,4 +135,6 @@ class GraphicsScene(QGraphicsScene):
                         self.history.pop()
                     elif self.history[-1] == 2:
                         self.stroke_points.pop()
+                        self.history.pop()
+                    elif self.history[-1] == 3:
                         self.history.pop()
