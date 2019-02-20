@@ -87,6 +87,7 @@ class Ex(QWidget, Ui_Form):
         self.dlg.exec_()
         self.color = self.dlg.currentColor().name()
         self.pushButton_4.setStyleSheet("background-color: %s;" % self.color)
+        self.scene.get_stk_color(self.color)
 
     def complete(self):
         sketch = self.make_sketch(self.scene.sketch_points)
