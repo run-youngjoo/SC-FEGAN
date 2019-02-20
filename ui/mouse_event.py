@@ -18,7 +18,7 @@ class GraphicsScene(QGraphicsScene):
         self.mask_points = []
         self.sketch_points = []
         self.stroke_points = []
-        
+
         # save the history of edit
         self.history = []
 
@@ -30,7 +30,7 @@ class GraphicsScene(QGraphicsScene):
         self.mask_points = []
         self.sketch_points = []
         self.stroke_points = []
-        
+
         # save the history of edit
         self.history = []
 
@@ -103,11 +103,11 @@ class GraphicsScene(QGraphicsScene):
 
     def erase_prev_pt(self):
         self.prev_pt = None
-    
+
     def undo(self):
         if len(self.items())>1:
-            if len(self.items())>=4:
-                for i in range(3):
+            if len(self.items())>=9:
+                for i in range(8):
                     item = self.items()[0]
                     self.removeItem(item)
                     if self.history[-1] == 0:
