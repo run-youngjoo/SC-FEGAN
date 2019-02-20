@@ -25,6 +25,9 @@ class Ui_Form(object):
         self.pushButton_7 = QtWidgets.QPushButton(Form)
         self.pushButton_7.setGeometry(QtCore.QRect(490, 10, 97, 27))
         self.pushButton_7.setObjectName("pushButton_7")
+        self.pushButton_8 = QtWidgets.QPushButton(Form)
+        self.pushButton_8.setGeometry(QtCore.QRect(370, 40, 97, 27))
+        self.pushButton_8.setObjectName("pushButton_8")
         self.graphicsView = QtWidgets.QGraphicsView(Form)
         self.graphicsView.setGeometry(QtCore.QRect(20, 120, 512, 512))
         self.graphicsView.setObjectName("graphicsView")
@@ -48,6 +51,7 @@ class Ui_Form(object):
         self.pushButton_5.clicked.connect(Form.complete)
         self.pushButton_6.clicked.connect(Form.undo)
         self.pushButton_7.clicked.connect(Form.color_change_mode)
+        self.pushButton_8.clicked.connect(Form.clear)
 
         self.saveImg.clicked.connect(Form.save_img)
 
@@ -65,10 +69,12 @@ class Ui_Form(object):
         self.pushButton_5.setText(_translate("Form", "Complete"))
         self.pushButton_6.setText(_translate("Form", "Undo"))
         self.pushButton_7.setText(_translate("Form", "Palette"))
+        self.pushButton_8.setText(_translate("Form", "Clear"))
 
         self.saveImg.setText(_translate("Form", "Save Img"))
 
         self.arrangement.setText(_translate("Form", "Arrange"))
+
 
 if __name__ == "__main__":
     import sys
