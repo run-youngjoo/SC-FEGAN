@@ -104,6 +104,11 @@ class GraphicsScene(QGraphicsScene):
     def erase_prev_pt(self):
         self.prev_pt = None
 
+    def reset_items(self):
+        for i in range(len(self.items())):
+            item = self.items()[0]
+            self.removeItem(item)
+        
     def undo(self):
         if len(self.items())>1:
             if len(self.items())>=9:
