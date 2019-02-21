@@ -17,6 +17,8 @@ We learn to edit face image with a deep network. Our network SC-FEGAN is well su
 - numpy
 - Python3
 - PyQt5
+- opencv-python
+- pyyaml
 
 ## Usage
 First, download the model from [Google drive](https://drive.google.com/open?id=1VPsYuIK_DY3Gw07LEjUhg2LwbEDlFpq1).
