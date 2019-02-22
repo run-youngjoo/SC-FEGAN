@@ -9,7 +9,7 @@ def gate_conv(x_in, cnum, ksize, stride=1, rate=1, name='conv',
     assert padding in ['SYMMETRIC', 'SAME', 'REFELECT']
     if padding == 'SYMMETRIC' or padding == 'REFELECT':
         p = int(rate*(ksize-1)/2)
-        x = tf.pad(x, [[0,0], [p, p], [p, p], [0,0]], mode=padding)
+        x = tf.pad(x_in, [[0,0], [p, p], [p, p], [0,0]], mode=padding)
         padding = 'VALID'
     x = tf.layers.conv2d(
         x_in, cnum, ksize, stride, dilation_rate=rate,
