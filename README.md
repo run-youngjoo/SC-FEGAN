@@ -75,7 +75,7 @@ We recommend using this in the following steps:
 ## License
 CC 4.0 Attribution-NonCommercial International
 
-The software is for educaitonal and academic research purpose only.
+The software is for educational and academic research purpose only.
 
 ## Notes
 
