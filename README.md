@@ -82,5 +82,16 @@ The software is for educational and academic research purpose only.
 - This is developed on Linux machine running Ubuntu 18.04.1
 - Provided model and sample code is under a non-commercial creative commons license.
 
+## Citing
+```
+@article{jo2019sc,
+  title={SC-FEGAN: Face Editing Generative Adversarial Network with User's Sketch and Color},
+  author={Jo, Youngjoo and Park, Jongyoul},
+  journal={arXiv preprint arXiv:1902.06838},
+  year={2019}
+}
+```
+
 ## Next
 - Update training code
+
