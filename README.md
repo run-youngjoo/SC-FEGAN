@@ -95,3 +95,5 @@ The software is for educational and academic research purpose only.
 ## Next
 - Update training code
 
+## Acknowledgement
+We acknowledge the official code [DeepFillv1](https://github.com/JiahuiYu/generative_inpainting). We thank all the researchers at ETRI, especially Kimin Yun and Jinwoo Jung, for insightful discussions.
