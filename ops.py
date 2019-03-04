@@ -4,9 +4,7 @@ import tensorflow as tf
 from tensorflow.contrib.framework.python.ops import add_arg_scope
 
 @add_arg_scope
-"""
-The gate convolution is made with reference to Deepfillv1(https://github.com/JiahuiYu/generative_inpainting)
-"""
+# The gate convolution is made with reference to Deepfillv1(https://github.com/JiahuiYu/generative_inpainting)
 def gate_conv(x_in, cnum, ksize, stride=1, rate=1, name='conv',
              padding='SAME', activation='leaky_relu', use_lrn=True,training=True):
     assert padding in ['SYMMETRIC', 'SAME', 'REFELECT']
