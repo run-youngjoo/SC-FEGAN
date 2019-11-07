@@ -1,5 +1,5 @@
-# SC-FEGAN (ICCV 2019)
-SC-FEGAN : Face Editing Generative Adversarial Network with User's Sketch and Color
+# SC-FEGAN
+SC-FEGAN : Face Editing Generative Adversarial Network with User's Sketch and Color (ICCV 2019)
 
 Youngjoo Jo, Jongyoul Park
 
@@ -85,11 +85,12 @@ The software is for educational and academic research purpose only.
 
 ## Citing
 ```
-@article{jo2019sc,
-  title={SC-FEGAN: Face Editing Generative Adversarial Network with User's Sketch and Color},
-  author={Jo, Youngjoo and Park, Jongyoul},
-  journal={Computer Vision (ICCV), IEEE International Conference on},
-  year={2019}
+@InProceedings{Jo_2019_ICCV,
+  author = {Jo, Youngjoo and Park, Jongyoul},
+  title = {SC-FEGAN: Face Editing Generative Adversarial Network With User's Sketch and Color},
+  booktitle = {The IEEE International Conference on Computer Vision (ICCV)},
+  month = {October},
+  year = {2019}
 }
 ```
 
